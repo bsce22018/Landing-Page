@@ -1,0 +1,1 @@
+This landing page is responsive for Laptop-L Dimensions 1440x714
