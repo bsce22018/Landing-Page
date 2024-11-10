@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -47,7 +47,6 @@ const Navbar = () => {
           </ul>
         </div>
 
- 
         <div className="hidden lg:flex">
           <Link href="/login">
             <button className="bg-orange-500 text-black font-bold px-12 py-3 rounded-md hover:bg-orange-600 text-lg">
@@ -61,14 +60,12 @@ const Navbar = () => {
             className="text-black focus:outline-none"
             onClick={toggleMenu}
           >
-      
             ☰
           </button>
         </div>
       </div>
 
-  
-      <div className={`lg:hidden bg-blue-200 p-4 ${isMenuOpen ? "block" : "hidden"}`}>
+      <div className={`lg:hidden bg-blue-200 p-4 ${isMenuOpen ? "block" : "hidden"} !important`}>
         <ul className="flex flex-col gap-y-4 text-black text-center">
           <li>
             <Link href="/">
