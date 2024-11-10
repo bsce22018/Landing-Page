@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-20 bg-blue-200 sticky top-0 font-serif">
+    <div className="w-full h-20 bg-blue-200 sticky top-0 font-serif z-50"> {/* Added z-50 */}
       <div className="container mx-auto px-4 h-full flex items-center justify-between max-w-screen-4xl lg:max-w-full">
         <div className="flex items-center">
           <Image src="/logo.png" alt="Logo" layout="intrinsic" width={180} height={130} />
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      <div className={`lg:hidden bg-blue-200 p-4 ${isMenuOpen ? "block" : "hidden"} !important`}>
+      <div className={`lg:hidden bg-blue-200 p-4 ${isMenuOpen ? "block" : "hidden"}`}>
         <ul className="flex flex-col gap-y-4 text-black text-center">
           <li>
             <Link href="/">
