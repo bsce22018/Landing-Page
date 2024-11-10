@@ -1,7 +1,6 @@
 import React from 'react';  
 import PropertyFilter from './PropertyFilter';
 
-
 const Home: React.FC = () => {
   return (
     <div className="relative">
@@ -12,20 +11,23 @@ const Home: React.FC = () => {
       >
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
         
-        <div className="container mx-auto h-full py-10 items-center justify-center relative text-black font-serif text-center px-4">
+        <div className="container mx-auto h-full py-10 flex flex-col items-center justify-center relative text-black font-serif text-center px-4">
           <div>
-            <h1 className="text-5xl mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4">
               The <span className="text-orange-500">Solution</span> to Finding Your
               <br />
               Dream Home is <span className="text-orange-500">Here</span>
-            </h1><br /><br />
-
-            <p className="mb-8 font-sans">We help you find your dream home</p>
+            </h1>
+            <p className="mb-8 font-sans text-sm sm:text-base md:text-lg">
+              We help you find your dream home
+            </p>
           </div>
         </div>
-
-        <PropertyFilter />
       </section>
+
+      <div>
+      <PropertyFilter />
+      </div>
     </div>
   );
 };
